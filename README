@@ -1,0 +1,41 @@
+# All the model and the analyses were implemented in MATLAB.
+
+
+-getActiveUnits.m
+---This function return the active units indexes according to the output of a layer.
+
+-getLifeSparse.m
+---This function return the lifetime sparseness of each unit according to the output of a layer.
+
+-getPSI.m
+---This function return the PSI matrix according to the distributions of every unit's responses to every phoneme.
+
+-getSTRF.m
+---This function return the strfs of each unit in the first 3 S layers according to the model parameters
+
+-getSTRFFeatures
+---This function return the 4 STRF features according to a STRF
+
+-main.m
+---This is the script file for SHMAX setup, training and inference. The corresponding parameters are determined in the "setParameters.m".
+
+-sample3dImages.m
+---This function return random 3D patches from the data
+
+-sampleImages.m
+---This function return random 2D patches from the data
+
+-SHMAX_2dS.m
+---This function return the bases and do the inference according to the model parameters, which is used for 2D inputs.
+---The training algorithm is implemented by the "SPAMS"*.
+
+-SHMAX_3dS.m
+---This function return the bases and do the inference according to the model parameters, which is used for 3D inputs.
+
+-SHMAX_C.m
+---This function do the max pooling according to the model parameters.
+
+-setParameters.m
+---This is a script file that determines the parameters used for build the deep SHMAX model.
+
+* SPAMS: http://spams-devel.gforge.inria.fr/
