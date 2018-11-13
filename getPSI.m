@@ -21,7 +21,7 @@ PSI = zeros(m, n);
 for i = 1:m
     for j = 1:n
         for k = [1:i-1, i+1:m]
-            [~, H] = ranksum(responses{i, j}, responses{k, j}, 0.1);
+            [~, H] = ranksum(responses{i, j}, responses{k, j}, 'alpha', 0.1, 'tail', 'right');
             PSI(i, j) = PSI(i, j) + H;
         end
     end
