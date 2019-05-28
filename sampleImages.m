@@ -16,7 +16,7 @@ function X = sampleImages(sampleSize, baseSize, dataDir)
         xx = floor(rand(samplePerImage, 1) * (size(x, 1) - baseSize));
         yy = floor(rand(samplePerImage, 1) * (size(x, 2) - baseSize));
         for j = 1:samplePerImage
-            X(:, (i-1)*samplePerImage+j) = reshape(x(xx:xx+baseSize-1, yy:yy+baseSize-1), [baseSize.^2, 1]);
+            X(:, (i-1)*samplePerImage+j) = reshape(x(xx(j):xx(j)+baseSize-1, yy(j):yy(j)+baseSize-1), [baseSize.^2, 1]);
         end
     end
 end
